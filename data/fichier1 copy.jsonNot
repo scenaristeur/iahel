@@ -1,0 +1,13 @@
+{
+  "name": "Bob",
+  "instructions": [
+    {
+      "id": 123,
+      "action": "truc"
+    },
+    {
+      "id": 456,
+      "action": "faire la vaisselle"
+    }
+  ]
+}

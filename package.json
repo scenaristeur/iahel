@@ -1,0 +1,22 @@
+{
+  "name": "iahel",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@helia/dag-cbor": "^4.0.1",
+    "@helia/dag-json": "^4.0.1",
+    "@helia/strings": "^4.0.1",
+    "chalk": "^5.4.1",
+    "helia": "^5.1.1",
+    "node-datachannel": "^0.23.0",
+    "uuid": "^11.0.3"
+  }
+}

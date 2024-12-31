@@ -1,0 +1,19 @@
+[
+  "first string",
+  {
+    "name": "object"
+  },
+  {
+    "something": {
+      "a": "nested",
+      "with": [
+        "a",
+        "r",
+        "r",
+        {
+          "aa": "yy"
+        }
+      ]
+    }
+  }
+]
