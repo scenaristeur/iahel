@@ -16,6 +16,7 @@
     "@helia/strings": "^4.0.1",
     "chalk": "^5.4.1",
     "helia": "^5.1.1",
+    "llama-tokenizer-js": "^1.2.2",
     "node-datachannel": "^0.23.0",
     "uuid": "^11.0.3"
   }

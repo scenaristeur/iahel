@@ -5,5 +5,5 @@ nvm use 23
 # ipjs js
 https://github.com/ipfs/helia
 
-# docker 
-secret_password = secret_password
+# tokenizer count 
+- https://github.com/belladoreai/llama-tokenizer-js
