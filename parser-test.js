@@ -9,10 +9,10 @@ let folder = "./data/"
 let files = await readdir(folder)
 // console.log(files)
 
-async function parse(file){
+async function encode(file){
 let json = JSON.parse(await readFile(folder + file , "utf8"));
 
-let parsed = await jsonparser.split(json)
+let parsed = await jsonparser.encode(json)
 console.log("parsed", parsed)
 // console.log(parsed.input)
 // console.log(parsed.input.instructions)
@@ -20,8 +20,8 @@ console.log("parsed", parsed)
 
 for await  (let file of files){
   if(file.endsWith(".json")){
-    console.log("parsing ", file)
-    await parse(file)
+    console.log("\n###\tparsing ", file)
+    await encode(file)
   }
 
 }

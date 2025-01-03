@@ -1,0 +1,20 @@
+[
+  {
+    "role": "system",
+    "content": "\n        You are a helpful assistant\n",
+    "tools": [
+      {"name": "create_entities", "description": "Create multiple entities in a knowledge Graph"},
+      {"name": "get_entities", "description": "Get multiple entities in a knowledge Graph"}
+    ]
+  },
+  {
+    "role": "user",
+    "content": "salut",
+    "name": "Bob"
+  },
+  {
+    "role": "assistant",
+    "name": "Chatter",
+    "content": "Bonjour, comment vas-tu ?"
+  }
+]

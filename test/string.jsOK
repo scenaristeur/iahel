@@ -1,0 +1,29 @@
+import * as assert from 'assert';
+import { JSONParser } from "../lib/json-parser.js";
+let jsonparser = new JSONParser()
+let hello_world_string = 'hello world'
+let hello_world_CID = "bafkreifzjut3te2nhyekklss27nh3k72ysco7y32koao5eei66wof36n5e"
+let CID = null
+
+describe('String', function () {
+  describe('encode', async function () {
+
+    it('should be equal to hello_world_CID', async function () {
+      CID = await jsonparser.encodeString(hello_world_string)
+      assert.equal(CID.toString(),hello_world_CID);
+    });
+  });
+  describe('decode', async function () {
+    it('should return '+hello_world_string, async function () {
+            let decoded = await jsonparser.decodeString(CID)
+// console.log(decoded)
+      assert.equal(decoded, hello_world_string);
+    });
+  });
+});
+
+
+
+
+
+

@@ -1,0 +1,31 @@
+import * as assert from 'assert';
+import { JSONParser } from "../lib/json-parser.js";
+let jsonparser = new JSONParser()
+let tools=[
+  {"name": "create_entities", "description": "Create multiple entities in a knowledge Graph"},
+  {"name": "get_entities", "description": "Get multiple entities in a knowledge Graph"}
+]
+let tools_CID = null
+
+describe('String', function () {
+  describe('encode', async function () {
+
+    it('should be equal to hello_world_CID', async function () {
+      CID = await jsonparser.encodeObject(tools)
+      assert.equal(CID.toString(),tools_CID);
+    });
+  });
+  describe('decode', async function () {
+    it('should return '+hello_world_string, async function () {
+            let decoded = await jsonparser.decodeString(CID)
+// console.log(decoded)
+      assert.equal(decoded, hello_world_string);
+    });
+  });
+});
+
+
+
+
+
+
