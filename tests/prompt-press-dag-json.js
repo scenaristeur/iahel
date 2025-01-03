@@ -3,6 +3,7 @@ import { dagJson } from '@helia/dag-json'
 import { CID } from 'multiformats/cid'
 
 import { extractJsonFromString } from '../lib/extract-json.js'
+import chalk from "chalk";
 
 const helia = await createHelia()
 const d = dagJson(helia)
@@ -55,7 +56,8 @@ json : {
 "tableau": ["on", "marche", "sur", "la ", "tête"]
 }
 
-
+et là c'est du texte de fin
+text : "et là c'est du texte de fin"
 
 `
 
@@ -75,18 +77,26 @@ console.log(prompt_with_json)
 const result = extractJsonFromString(prompt_with_json)
 // console.log(result)
 
-let prompt_pressed =  Object.assign("", prompt_with_json);
+let start_index = 0
+let end_index = 0
+let last_res_length = 0
+let prompt_parts = []
+
 for (const res of result) {
     console.log("\n------------------\n",res, typeof res);
 let cid = await d.add(res)
 console.log(cid)
-let index = prompt_with_json.indexOf(JSON.stringify(res))
-console.log(index)
 
-// prompt_pressed = await prompt_pressed.replaceAll(res,cid.toString())
-// console.log(prompt_pressed)
+end_index = res.start+last_res_length
 
+let prompt_part = prompt_with_json.slice(start_index, end_index);
+console.log("\n##\nsub",chalk.blue(prompt_part))
+// index = index + res.length
+prompt_parts.push(prompt_part)
+prompt_parts.push(cid)
+start_index = res.start + res.length
+last_res_length = res.length
 
 }
 
-// console.log("PRESSED",await prompt_pressed)
+console.log(prompt_parts)
